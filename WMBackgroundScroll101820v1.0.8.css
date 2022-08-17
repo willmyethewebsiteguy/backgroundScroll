@@ -9,6 +9,7 @@ body:not(.sqs-edit-mode-active) #page .wm-background-change .section-background{
   opacity:0;
   height:100vh;
   width:100vw;
+  z-index:1;
 }
 body:not(.sqs-edit-mode-active) #page .wm-background-change{
   background:transparent;
