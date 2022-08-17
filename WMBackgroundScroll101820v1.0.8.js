@@ -82,6 +82,6 @@ function backgroundScroll(){
   });
 }
 if($('[wm-plugin="background-change"]').length || $('[wm-plugin="background-change-all"]').length){
-  $('head').prepend('<link href="https://assets.codepen.io/3198845/WMBackgroundScroll101820v1.0.8.css" rel="stylesheet">');
+  $('head').prepend('<link href="https://cdn.jsdelivr.net/gh/willmyethewebsiteguy/backgroundScroll@1.1.001/styles.min.css" rel="stylesheet">');
   backgroundScroll();
 }
