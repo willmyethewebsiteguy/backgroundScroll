@@ -24,7 +24,7 @@ body:not(.sqs-edit-mode-active) #page .wm-background-change.background-width--in
 body:not(.sqs-edit-mode-active) #page .wm-background-change .content-wrapper{
   z-index:1;
 }
-#footer-sections{
+footer#footer-sections{
   z-index: 9;
 }
 body.sqs-edit-mode-active .wm-background-change .section-background{
