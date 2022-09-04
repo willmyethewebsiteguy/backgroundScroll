@@ -1,0 +1,8 @@
+/**
+ * Minified by jsDelivr using clean-css v5.3.0.
+ * Original file: /gh/willmyethewebsiteguy/backgroundScroll@1.1.003/styles.css
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+body:not(.sqs-edit-mode-active) #page .wm-background-change .section-background{position:fixed;opacity:0;height:100vh;width:100vw;z-index:1}body:not(.sqs-edit-mode-active) #page .wm-background-change{background:0 0}body:not(.sqs-edit-mode-active) .hide-block,body:not(.sqs-edit-mode-active) [wm-plugin=background-change-all]{display:none}body:not(.sqs-edit-mode-active) #page .wm-background-change.background-width--inset .section-background{height:unset;width:unset}body:not(.sqs-edit-mode-active) #page .wm-background-change .content-wrapper{z-index:1}footer#footer-sections{z-index:9}body.sqs-edit-mode-active .wm-background-change .section-background{visibility:visible!important;opacity:1!important}@media(max-width:767px){body:not(.sqs-edit-mode-active) #page .wm-background-change .section-background{height:107vh}}
+/*# sourceMappingURL=/sm/f51487608554b645a22a2c8a5a55ed774fd4fb3e6ee5c00734cca95bfe53342e.map */
