@@ -4,12 +4,12 @@
  * Copyright Will Myers 
 ========== */
 
-body:not(.sqs-edit-mode-active) #page .wm-background-change .section-background{
+/*For Page-Section > Section-Background <-- Can remove later*/
+body:not(.sqs-edit-mode-active) #page .wm-background-change > .section-background{
   position:fixed;
   opacity:0;
   height:100vh;
   width:100vw;
-  z-index:1;
 }
 body:not(.sqs-edit-mode-active) #page .wm-background-change{
   background:transparent;
@@ -17,24 +17,56 @@ body:not(.sqs-edit-mode-active) #page .wm-background-change{
 body:not(.sqs-edit-mode-active) [wm-plugin="background-change-all"], body:not(.sqs-edit-mode-active) .hide-block{
   display:none;
 }
-body:not(.sqs-edit-mode-active) #page .wm-background-change.background-width--inset .section-background {
+body:not(.sqs-edit-mode-active) #page .wm-background-change.background-width--inset > .section-background {
   height: unset;
   width:unset;
 }
 body:not(.sqs-edit-mode-active) #page .wm-background-change .content-wrapper{
   z-index:1;
 }
-footer#footer-sections{
-  z-index: 9;
-}
-body.sqs-edit-mode-active .wm-background-change .section-background{
+body.sqs-edit-mode-active .wm-background-change > .section-background{
   visibility: visible !important;
   opacity: 1 !important;
 }
-
-
 @media(max-width:767px) {
-  body:not(.sqs-edit-mode-active) #page .wm-background-change .section-background{
+  body:not(.sqs-edit-mode-active) #page .wm-background-change > .section-background{
     height:107vh;
   }
+}
+
+
+
+/*For Page-Section > Section-Border*/
+body:not(.sqs-edit-mode-active) #page .wm-background-change > .section-border{
+  position:fixed;
+  opacity:0;
+  height:100vh;
+  width:100vw;
+}
+body:not(.sqs-edit-mode-active) #page .wm-background-change{
+  background:transparent;
+}
+body:not(.sqs-edit-mode-active) [wm-plugin="background-change-all"], body:not(.sqs-edit-mode-active) .hide-block{
+  display:none;
+}
+body:not(.sqs-edit-mode-active) #page .wm-background-change.background-width--inset > .section-border{
+  height: unset;
+  width:unset;
+}
+body:not(.sqs-edit-mode-active) #page .wm-background-change .content-wrapper{
+  z-index:1;
+}
+body.sqs-edit-mode-active .wm-background-change > .section-border{
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+@media(max-width:767px) {
+  body:not(.sqs-edit-mode-active) #page .wm-background-change > .section-border{
+    height:107vh;
+  }
+}
+
+/*Additional CSS*/
+footer#footer-sections{
+  z-index: 9;
 }
