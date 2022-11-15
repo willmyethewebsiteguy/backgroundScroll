@@ -44,12 +44,19 @@ function backgroundScroll(){
       toggleClass: 'in-viewport'
     });
   }
+  
+  let target;
+  if (document.querySelector('section.page-section > .section-border')){
+    target = '.section-border';
+  } else {
+    target = '.section-background';
+  }
   if($('[wm-plugin="background-change-all"]').length){
     $('#page .page-section').each(function(){
       let $section = $(this).closest('.page-section');
       let keyElement = $('[wm-plugin="background-change-all"]');
       $section.addClass('wm-background-change');
-      let $sectionBkg = $section.find('.section-background');
+      let $sectionBkg = $section.find(target);
       let transitionStart = $(keyElement).attr('data-start') || '-450px';
       let transitionEnd = $(keyElement).attr('data-end') || '-200px';
       let showMarkers = $(keyElement).attr('data-markers') || false;
@@ -60,7 +67,7 @@ function backgroundScroll(){
       $(this).closest('.sqs-block').addClass('hide-block');
       let $section = $(this).closest('.page-section');
       $section.addClass('wm-background-change');
-      let $sectionBkg = $section.find('.section-background');
+      let $sectionBkg = $section.find(target);
       let transitionStart = $(this).attr('data-start') || '-450px';
       let transitionEnd = $(this).attr('data-end') || '-200px';
       let showMarkers = $(this).attr('data-markers') || false;
@@ -82,6 +89,6 @@ function backgroundScroll(){
   });
 }
 if($('[wm-plugin="background-change"]').length || $('[wm-plugin="background-change-all"]').length){
-  $('head').prepend('<link href="https://cdn.jsdelivr.net/gh/willmyethewebsiteguy/backgroundScroll@1.1.003/styles.min.css" rel="stylesheet">');
+  $('head').prepend('<link href="https://cdn.jsdelivr.net/gh/willmyethewebsiteguy/backgroundScroll@1.1/styles.min.css" rel="stylesheet">');
   backgroundScroll();
 }
