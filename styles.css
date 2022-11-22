@@ -1,5 +1,5 @@
 /* ==========
- * Version 1.1
+ * Version TESTING
  * Change Background on Scroll in Squarespace
  * Copyright Will Myers 
 ========== */
@@ -20,9 +20,6 @@ body:not(.sqs-edit-mode-active) [wm-plugin="background-change-all"], body:not(.s
 body:not(.sqs-edit-mode-active) #page .wm-background-change.background-width--inset > .section-background {
   height: unset;
   width:unset;
-}
-body:not(.sqs-edit-mode-active) #page .wm-background-change .content-wrapper{
-  z-index:1;
 }
 body.sqs-edit-mode-active .wm-background-change > .section-background{
   visibility: visible !important;
@@ -53,9 +50,6 @@ body:not(.sqs-edit-mode-active) #page .wm-background-change.background-width--in
   height: unset;
   width:unset;
 }
-body:not(.sqs-edit-mode-active) #page .wm-background-change .content-wrapper{
-  z-index:1;
-}
 body.sqs-edit-mode-active .wm-background-change > .section-border{
   visibility: visible !important;
   opacity: 1 !important;
@@ -67,6 +61,24 @@ body.sqs-edit-mode-active .wm-background-change > .section-border{
 }
 
 /*Additional CSS*/
-footer#footer-sections{
+.wm-background-scroll-css-enabled .page-section{
+  z-index:2;
+}
+.wm-background-scroll-css-enabled .page-section>.section-border {
+  z-index:2;
+}
+.wm-background-scroll-css-enabled .page-section>.content-wrapper{
+  z-index:3;
+}
+.wm-background-scroll-css-enabled .wm-background-change{
+  z-index:1;
+}
+.wm-background-scroll-css-enabled .wm-background-change>.section-border{
+  z-index:1;
+}
+.wm-background-scroll-css-enabled .wm-background-change>.content-wrapper{
+  z-index:2;
+}
+.wm-background-scroll-css-enabled footer#footer-sections{
   z-index: 9;
 }
