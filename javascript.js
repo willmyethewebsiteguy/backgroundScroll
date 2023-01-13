@@ -25,7 +25,7 @@ function backgroundScroll(){
   function BuildBkgScroll($section, $sectionBkg, transitionStart, transitionEnd, showMarkers, bkgColor, colorStart){
     $sectionBkg.css({'background-color': bkgColor})
     $section.css({'--color-start' : colorStart});
-
+    
     let showBkg = gsap.fromTo($sectionBkg, { autoAlpha: 0 },{ autoAlpha: 1 });
 
     ScrollTrigger.create({
@@ -62,10 +62,19 @@ function backgroundScroll(){
       let showMarkers = $(keyElement).attr('data-markers') || false;
       new BuildBkgScroll($section, $sectionBkg, transitionStart, transitionEnd, showMarkers);
     });
-  } else{
-    $('[wm-plugin="background-change"]').each(function(){
+  } else {
+    let sections = $('[wm-plugin="background-change"]');
+    
+    sections.each(function(){
       $(this).closest('.sqs-block').addClass('hide-block');
-      let $section = $(this).closest('.page-section');
+      
+      let $section;
+      if ($(this).attr('data-target')) {
+        $section = $($(this).attr('data-target'));
+      } else {
+        $section = $(this).closest('.page-section');
+      }
+      
       $section.addClass('wm-background-change');
       let $sectionBkg = $section.find(target);
       let transitionStart = $(this).attr('data-start') || '-450px';
@@ -88,8 +97,8 @@ function backgroundScroll(){
     }, 1000)
   });
 }
-if($('[wm-plugin="background-change"]').length || $('[wm-plugin="background-change-all"]').length){
-  $('head').prepend('<link href="https://cdn.jsdelivr.net/gh/willmyethewebsiteguy/backgroundScroll@1.1/styles.min.css" rel="stylesheet">');
+if($('[wm-plugin="background-change"]').length || $('[wm-plugin="background-change-all"]').length || window.backgroundScrollSections){
+  $('head').prepend('<link href="https://assets.codepen.io/3198845/WMBackgroundScrollTESTING.css" rel="stylesheet">');
   backgroundScroll();
   document.body.classList.add('wm-background-scroll-css-enabled')
 }
