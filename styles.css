@@ -3,7 +3,6 @@
  * Change Background on Scroll in Squarespace
  * Copyright Will Myers 
 ========== */
-
 /*For Page-Section > Section-Background <-- Can remove later*/
 body:not(.sqs-edit-mode-active) #page .wm-background-change > .section-background{
   position:fixed;
@@ -34,7 +33,8 @@ body.sqs-edit-mode-active .wm-background-change > .section-background{
 
 
 /*For Page-Section > Section-Border*/
-body:not(.sqs-edit-mode-active) #page .wm-background-change > .section-border{
+body:not(.sqs-edit-mode-active) #page .wm-background-change > .section-border,
+body:not(.sqs-edit-mode-active) #page .wm-background-change > .section-divider{
   position:fixed;
   opacity:0;
   height:100vh;
@@ -46,16 +46,19 @@ body:not(.sqs-edit-mode-active) #page .wm-background-change{
 body:not(.sqs-edit-mode-active) [wm-plugin="background-change-all"], body:not(.sqs-edit-mode-active) .hide-block{
   display:none;
 }
-body:not(.sqs-edit-mode-active) #page .wm-background-change.background-width--inset > .section-border{
+body:not(.sqs-edit-mode-active) #page .wm-background-change.background-width--inset > .section-border,
+body:not(.sqs-edit-mode-active) #page .wm-background-change.background-width--inset > .section-divider{
   height: unset;
   width:unset;
 }
-body.sqs-edit-mode-active .wm-background-change > .section-border{
+body.sqs-edit-mode-active .wm-background-change > .section-border,
+body.sqs-edit-mode-active .wm-background-change > .section-divider{
   visibility: visible !important;
   opacity: 1 !important;
 }
 @media(max-width:767px) {
-  body:not(.sqs-edit-mode-active) #page .wm-background-change > .section-border{
+  body:not(.sqs-edit-mode-active) #page .wm-background-change > .section-border,
+  body:not(.sqs-edit-mode-active) #page .wm-background-change > .section-divider{
     height:107vh;
   }
 }
@@ -64,21 +67,23 @@ body.sqs-edit-mode-active .wm-background-change > .section-border{
 .wm-background-scroll-css-enabled .page-section{
   z-index:2;
 }
-.wm-background-scroll-css-enabled .page-section>.section-border {
+.wm-background-scroll-css-enabled .page-section > .section-border,
+.wm-background-scroll-css-enabled .page-section > .section-divider {
   z-index:2;
 }
-.wm-background-scroll-css-enabled .page-section>.content-wrapper{
+.wm-background-scroll-css-enabled .page-section > .content-wrapper {
   z-index:3;
 }
-.wm-background-scroll-css-enabled .wm-background-change{
+.wm-background-scroll-css-enabled .wm-background-change {
   z-index:1;
 }
-.wm-background-scroll-css-enabled .wm-background-change>.section-border{
+.wm-background-scroll-css-enabled .wm-background-change > .section-border,
+.wm-background-scroll-css-enabled .wm-background-change > .section-divider{
   z-index:1;
 }
-.wm-background-scroll-css-enabled .wm-background-change>.content-wrapper{
+.wm-background-scroll-css-enabled .wm-background-change > .content-wrapper{
   z-index:2;
 }
-.wm-background-scroll-css-enabled footer#footer-sections{
+.wm-background-scroll-css-enabled footer#footer-sections {
   z-index: 9;
 }
