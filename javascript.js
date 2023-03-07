@@ -107,7 +107,7 @@ function backgroundScroll(){
   });
 }
 if($('[wm-plugin="background-change"]').length || $('[wm-plugin="background-change-all"]').length || window.backgroundScrollSections){
-  $('head').prepend('<link href="https://cdn.jsdelivr.net/gh/willmyethewebsiteguy/backgroundScroll@1.1/styles.min.css" rel="stylesheet">');
+  $('head').prepend('<link href="https://cdn.jsdelivr.net/gh/willmyethewebsiteguy/backgroundScroll@1/styles.min.css" rel="stylesheet">');
   backgroundScroll();
   document.body.classList.add('wm-background-scroll-css-enabled')
 }
