@@ -1,5 +1,5 @@
 /* ==========
- * Version TESTING
+ * Production
  * Change Background on Scroll in Squarespace
  * Copyright Will Myers 
 ========== */
@@ -72,7 +72,7 @@ body.sqs-edit-mode-active .wm-background-change > .section-divider{
   z-index:2;
 }
 .wm-background-scroll-css-enabled .page-section > .content-wrapper {
-  z-index:3;
+  z-index:3 !important;
 }
 .wm-background-scroll-css-enabled .wm-background-change {
   z-index:1;
