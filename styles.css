@@ -64,18 +64,12 @@ body.sqs-edit-mode-active .wm-background-change > .section-divider{
 }
 
 /*Additional CSS*/
-.wm-background-scroll-css-enabled .page-section{
-  z-index:2;
-}
 .wm-background-scroll-css-enabled .page-section > .section-border,
 .wm-background-scroll-css-enabled .page-section > .section-divider {
   z-index:2;
 }
 .wm-background-scroll-css-enabled .page-section > .content-wrapper {
   z-index:3 !important;
-}
-.wm-background-scroll-css-enabled .wm-background-change {
-  z-index:1;
 }
 .wm-background-scroll-css-enabled .wm-background-change > .section-border,
 .wm-background-scroll-css-enabled .wm-background-change > .section-divider{
