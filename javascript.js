@@ -54,7 +54,7 @@ function backgroundScroll(){
     target = '.section-background';
   }
   if($('[wm-plugin="background-change-all"]').length){
-    $('#page .page-section').each(function(){
+    $('#sections > .page-section').each(function(){
       let $section = $(this).closest('.page-section');
       let keyElement = $('[wm-plugin="background-change-all"]');
       $section.addClass('wm-background-change');
