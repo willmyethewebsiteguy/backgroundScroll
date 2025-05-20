@@ -81,3 +81,9 @@ body.sqs-edit-mode-active .wm-background-change > .section-divider{
 .wm-background-scroll-css-enabled footer#footer-sections {
   z-index: 9;
 }
+
+/*Show pagination with Background Scroll*/
+.wm-background-scroll-css-enabled section#itemPagination {
+  z-index: 1;
+  position: relative;
+}
